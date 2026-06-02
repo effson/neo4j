@@ -37,7 +37,7 @@
 
 <img src="image/1.入门介绍图.png" style="width: 50%;" />
 
-```neo4j
+```Cypher
 CREATE (p:Person {name: "sjf", title: "Developer"})-[r:WORKS_AT]->(c:Company {name: "TechCorp", industry: "IT"})
 RETURN p, r, c
 ```
