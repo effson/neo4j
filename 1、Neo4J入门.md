@@ -45,8 +45,7 @@ RETURN p, r, c
 <img src="image/2.示意图.png" style="width: 50%;" />
 
 ```Cypher
-CREATE (p:Person {name: "sjf", title: "Developer"})-[r:WORKS_AT]->(c:Company {name: "TechCorp", industry: "IT"})
-RETURN p, r, c
+CREATE (:Person:Actor {name: 'Tom Hanks', born: 1956})-[:ACTED_IN {roles: ['Forrest']}]->(:Movie {title: 'Forrest Gump', released: 1994})<-[:DIRECTED]-(:Person {name: 'Robert Zemeckis', born: 1951})
 ```
 
 ### 2.2 与关系型数据库概念对照
