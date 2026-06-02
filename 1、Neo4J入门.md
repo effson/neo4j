@@ -89,6 +89,20 @@ CREATE (:Person:Actor {name: 'Tom Hanks', born: 1956})-[:ACTED_IN {roles: ['Forr
 (演员)-[:ACTED_IN {roles: ["主角"]}]->(电影)
 ```
 
+<img src="image/3.关系图.png" style="width: 50%;" />
+
+```cypher
+MERGE (p1:Person {name: "张三"})
+MERGE (p2:Person {name: "李四"})
+MERGE (p1)-[r1:KNOWS]->(p2)
+
+MERGE (a:Actor {name: "某个演员"})
+MERGE (m:Movie {title: "某个电影"})
+MERGE (a)-[r2:ACTED_IN {roles: ["主角"]}]->(m)
+
+RETURN p1, r1, p2, a, r2, m
+```
+
 #### 2.3.4 属性 (Property)
 
 - 节点或关系上的**键值对**，用于描述特征。
