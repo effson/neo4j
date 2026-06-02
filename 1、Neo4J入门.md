@@ -142,15 +142,16 @@ RETURN p1, r1, p2, a, r2, m
 
 ```bash
 # 启动容器
-docker run -d \
+docker run -d  \
   --name neo4j \
   -p 7474:7474 \
   -p 7687:7687 \
-  -e NEO4J_AUTH=neo4j/your_password123 \
+  -e NEO4J_AUTH=neo4j/neo4j123  \
   -v $HOME/neo4j/data:/data \
   -v $HOME/neo4j/logs:/logs \
   -v $HOME/neo4j/plugins:/plugins \
-  neo4j:2026.01.3
+  --restart always \
+  neo4j:latest
 ```
 
 **端口说明：**
