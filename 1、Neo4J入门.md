@@ -35,7 +35,7 @@
 
 用一张图来理解：
 
-<img src="image/1.入门介绍图.png" style="width: 10%;" />
+<img src="image/1.入门介绍图.png" style="width: 50%;" />
 
 ```neo4j
 CREATE (p:Person {name: "sjf", title: "Developer"})-[r:WORKS_AT]->(c:Company {name: "TechCorp", industry: "IT"})
