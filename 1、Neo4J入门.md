@@ -37,6 +37,10 @@
 
 <img src="image/1.入门介绍图.png" style="zoom:50%;" />
 
+```neo4j
+CREATE (p:Person {name: "sjf", title: "Developer"})-[r:WORKS_AT]->(c:Company {name: "TechCorp", industry: "IT"})
+RETURN p, r, c
+```
 ### 2.2 与关系型数据库概念对照
 
 | 关系型数据库 | 图数据库 |
