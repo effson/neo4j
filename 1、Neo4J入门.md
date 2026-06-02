@@ -42,7 +42,7 @@ CREATE (p:Person {name: "sjf", title: "Developer"})-[r:WORKS_AT]->(c:Company {na
 RETURN p, r, c
 ```
 
-<img src="image/2.入门介绍图.png" style="width: 50%;" />
+<img src="image/2.示意图.png" style="width: 50%;" />
 
 ```Cypher
 CREATE (p:Person {name: "sjf", title: "Developer"})-[r:WORKS_AT]->(c:Company {name: "TechCorp", industry: "IT"})
