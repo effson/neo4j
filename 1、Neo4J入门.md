@@ -94,7 +94,7 @@ CREATE (:Person:Actor {name: 'Tom Hanks', born: 1956})-[:ACTED_IN {roles: ['Forr
 ```cypher
 MERGE (p1:Person {name: "张三"})
 MERGE (p2:Person {name: "李四"})
-MERGE (p1)-[r1:KNOWS]->(p2)
+MERGE (p1)-[r1:KNOWS {since: 2020}]->(p2)
 
 MERGE (a:Actor {name: "某个演员"})
 MERGE (m:Movie {title: "某个电影"})
